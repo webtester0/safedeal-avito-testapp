@@ -1,0 +1,1 @@
+# safedeal-avito-testapp
