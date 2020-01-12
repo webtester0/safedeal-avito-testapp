@@ -13,12 +13,8 @@ export default (state = initialState, action) => {
                 photos: action.payload,
                 isReady: true
             }
-        case actionTypes.PHOTOS_READY: 
-            return {
-                ...state,
-                isReady: true
-            }
         default:
             return state;
     }
 };
+

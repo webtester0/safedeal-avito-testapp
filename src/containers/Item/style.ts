@@ -35,27 +35,26 @@ export const Content = styled.div`
 `
 
 export const LeftPart = styled.div`
-    display: flex;
-    flex-direction: column;
     margin-right: 14px;
+    flex-grow: 2;
 `
 export const RightPart = styled.div`
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
 `
 
-export const Block = styled.div`
-    display: block;
-    width: 330px;
+export const Block = styled.div<InnerWrapperProps>`
     height: 200px;
-    background-color: peachpuff;
     margin-bottom: 30px;
+    ${props => props.url && css`background-image: url(${props.url})`};
+    background-size: cover;
 `
 
-export const Input = styled.div`
-    display: block;
-    width: 330px;
-    height: 30px;
-    border: 1px solid black;
+export const InputForm = styled.div`
     margin-bottom: 20px;
+`
+
+export const ButtonContent = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
 `

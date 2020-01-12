@@ -1,21 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ModalInner } from './ModalInner';
+import { MergeNativeProps } from '@common/interface';
 
-interface ModalProps {
+interface ModalOwnProps {
     isOpen: boolean;
 
+    //TODO: all Function change to arrow!!!
     onEscape?: () => void;
 
     onClickAway?: (event: React.MouseEvent) => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({ isOpen, onEscape, onClickAway, children }) => {
+type ModalProps = MergeNativeProps<HTMLDivElement, ModalOwnProps>;
+
+export const Modal: React.FC<ModalProps> = ({
+    isOpen,
+    onEscape,
+    onClickAway,
+    children,
+    className
+}) => {
     return (
         <>
             {isOpen &&
                 ReactDOM.createPortal(
-                    <ModalInner onEscape={onEscape} onClickAway={onClickAway}>
+                    <ModalInner onEscape={onEscape} onClickAway={onClickAway} className={className}>
                         {children}
                     </ModalInner>,
                     document.body

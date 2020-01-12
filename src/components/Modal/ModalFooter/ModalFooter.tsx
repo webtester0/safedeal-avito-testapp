@@ -1,6 +1,9 @@
 import React from 'react';
 import { Footer } from './style';
+import { MergeNativeProps } from '@common/interface';
 
-export const ModalFooter: React.FC = ({ children }) => {
-    return <Footer>{children}</Footer>;
+type ModalFooterProps = MergeNativeProps<HTMLDivElement>;
+
+export const ModalFooter: React.FC<ModalFooterProps> = ({ children, className }) => {
+    return <Footer className={className}>{children}</Footer>;
 };

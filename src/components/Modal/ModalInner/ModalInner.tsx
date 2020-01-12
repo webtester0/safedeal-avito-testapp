@@ -1,7 +1,8 @@
 import React, { useEffect, useCallback } from 'react';
 import { Wrapper, ModalOverlay, ModalWindow } from './style';
+import { MergeNativeProps } from '@common/interface';
 
-interface ModalInnerProps {
+interface ModalInnerOwnProps {
     onEscape?: () => void;
 
     onClickAway?: (event: React.MouseEvent) => void;
@@ -9,11 +10,13 @@ interface ModalInnerProps {
     onClose?: (event: React.MouseEvent) => void;
 }
 
-export const ModalInner: React.FC<ModalInnerProps> = ({
-    onClose,
+type ModaInnerlProps = MergeNativeProps<HTMLDivElement, ModalInnerOwnProps>;
+
+export const ModalInner: React.FC<ModaInnerlProps> = ({
     onEscape,
     onClickAway,
-    children
+    children,
+    className
 }) => {
     const handleKeyDown = useCallback(
         e => {
@@ -42,7 +45,7 @@ export const ModalInner: React.FC<ModalInnerProps> = ({
     return (
         <Wrapper>
             <ModalOverlay onClick={onClickAway} />
-            <ModalWindow>{children}</ModalWindow>
+            <ModalWindow className={className}>{children}</ModalWindow>
         </Wrapper>
     );
 };

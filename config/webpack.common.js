@@ -35,6 +35,7 @@ module.exports = {
             '@containers': path.resolve(__dirname, '../src', 'containers'),
             '@store': path.resolve(__dirname, '../src', 'store'),
             '@assets': path.resolve(__dirname, '../src', 'assets'),
+            '@common': path.resolve(__dirname, '../src', 'common'),
             'react-dom': '@hot-loader/react-dom'
         }
     },

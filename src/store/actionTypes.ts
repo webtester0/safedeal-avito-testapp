@@ -1,8 +1,10 @@
+//TODO: review 
 const actionTypes = {
     SET_PHOTOS: "SET_PHOTOS",
-    PHOTOS_READY: "PHOTOS_READY",
     PHOTOS_REQUEST: "PHOTOS_REQUEST",
-    OPEN_MODAL: "OPEN_MODAL"
+    SET_MODAL_PHOTO: "SET_MODAL_PHOTO",
+    //TODO: remove 
+    SUBMIT_COMMIT: "SUBMIT_COMMIT"
   };
   
   export default actionTypes;

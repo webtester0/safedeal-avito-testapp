@@ -1,25 +1,28 @@
-import React, {useEffect} from 'react';
-import { connect } from "react-redux";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 //TODO: alias store
 import { setPhotos } from '@store/actions/photos';
 import { Loader } from '@components/Loader';
 import { Wrapper, LoaderWrapper } from './style';
-import { Item } from '@components/Item';
+import { Item } from '@containers/Item';
 
 interface GalleryProps {
     photos?: { id: number; url: string }[];
+
     isReady?: boolean;
+    
     setPhotosAction?: Function;
 }
 
 const Gallery: React.FC<GalleryProps> = ({ photos, setPhotosAction, isReady }) => {
+    //TODO
     useEffect(() => {
         setPhotosAction();
     }, []);
     return isReady ? (
         <Wrapper>
             {photos.map(item => (
-                <Item key={item.id} url={item.url}></Item>
+                <Item key={item.id} url={item.url} id={item.id}></Item>
             ))}
         </Wrapper>
     ) : (
@@ -29,10 +32,13 @@ const Gallery: React.FC<GalleryProps> = ({ photos, setPhotosAction, isReady }) =
     );
 };
 
-const mapStateToProps = ({ photos, isReady }) => ({ photos, isReady });
+const mapStateToProps = ({ photos }) => ({
+    //TODO
+    photos: photos.photos,
+    isReady: photos.isReady
+ });
 const mapDispathcToProps = dispatch => ({
     setPhotosAction: () => dispatch(setPhotos())
 });
-
 
 export default connect(mapStateToProps, mapDispathcToProps)(Gallery);
