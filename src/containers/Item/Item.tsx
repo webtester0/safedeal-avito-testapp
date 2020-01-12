@@ -22,7 +22,7 @@ interface ItemProps {
 
     id?: number;
 
-    setModalPhotoAction?: () => void;
+    setModalPhotoAction?: (id: number) => void;
 
     comments?: {
         id: number;

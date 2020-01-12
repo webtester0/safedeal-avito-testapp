@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 import { Wrapper, ModalOverlay, ModalWindow } from './style';
-import { MergeNativeProps } from '@common/interface';
+import { MergedNativeProps } from '@common/interface';
 
 interface ModalInnerOwnProps {
     onEscape?: () => void;
@@ -10,7 +10,7 @@ interface ModalInnerOwnProps {
     onClose?: (event: React.MouseEvent) => void;
 }
 
-type ModaInnerlProps = MergeNativeProps<HTMLDivElement, ModalInnerOwnProps>;
+type ModaInnerlProps = MergedNativeProps<HTMLDivElement, ModalInnerOwnProps>;
 
 export const ModalInner: React.FC<ModaInnerlProps> = ({
     onEscape,

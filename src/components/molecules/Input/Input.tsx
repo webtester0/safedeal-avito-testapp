@@ -1,6 +1,6 @@
 import React from 'react';
 import { InputText, InputSub } from './style';
-import { MergeNativeProps } from '@common/interface';
+import { MergedNativeProps } from '@common/interface';
 
 interface InputOwnProps {
     placeholder?: string;
@@ -15,10 +15,10 @@ interface InputOwnProps {
 
     bgc?: string;
 
-    onChange?: () => void;
+    onChange?: (evenet) => void;
 }
 
-type InputProps = MergeNativeProps<HTMLDivElement, InputOwnProps>;
+type InputProps = MergedNativeProps<HTMLDivElement, InputOwnProps>;
 
 export const Input: React.FC<InputProps> = ({
     placeholder,

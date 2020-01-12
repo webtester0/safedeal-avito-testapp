@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ModalInner } from './ModalInner';
-import { MergeNativeProps } from '@common/interface';
+import { MergedNativeProps } from '@common/interface';
 
 interface ModalOwnProps {
     isOpen: boolean;
@@ -11,7 +11,7 @@ interface ModalOwnProps {
     onClickAway?: (event: React.MouseEvent) => void;
 }
 
-type ModalProps = MergeNativeProps<HTMLDivElement, ModalOwnProps>;
+type ModalProps = MergedNativeProps<HTMLDivElement, ModalOwnProps>;
 
 export const Modal: React.FC<ModalProps> = ({
     isOpen,

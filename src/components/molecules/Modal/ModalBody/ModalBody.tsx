@@ -1,8 +1,12 @@
 import React from 'react';
 import { Body, Content } from './style';
-import { MergeNativeProps } from '@common/interface';
+import { MergedNativeProps } from '@common/interface';
 
-type ModalBodyProps = MergeNativeProps<HTMLDivElement>;
+interface ModalBodyOwnProps {
+
+}
+
+type ModalBodyProps = MergedNativeProps<HTMLDivElement, ModalBodyOwnProps>;
 
 export const ModalBody: React.FC<ModalBodyProps> = ({ children, className }) => {
     return (
