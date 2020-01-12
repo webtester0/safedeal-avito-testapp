@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InputForm } from './style';
+import { InputForm, FormBlock } from './style';
 import { Input } from '@molecules/Input';
 import axios from 'axios';
 
@@ -34,7 +34,7 @@ export const Form: React.FC<FormProps> = ({ id }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <FormBlock onSubmit={handleSubmit}>
             <InputForm>
                 <Input placeholder={'Ваше имя'} value={name} onChange={handleChangeName} />
             </InputForm>
@@ -46,6 +46,6 @@ export const Form: React.FC<FormProps> = ({ id }) => {
                 />
             </InputForm>
             <Input type={'submit'} value={'Оставить комментарий'} />
-        </form>
+        </FormBlock>
     );
 };

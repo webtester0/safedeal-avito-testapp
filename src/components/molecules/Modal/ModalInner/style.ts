@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '@device'
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -32,4 +33,10 @@ export const ModalWindow = styled.div`
   flex-direction: column;
   transform: translate(0, -10%);
   width: 620px;
+
+  @media ${device.mobileS} {
+    width: 100%;
+    height: 100%;
+    transform: none;
+  }
 `;

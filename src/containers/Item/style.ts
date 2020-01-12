@@ -26,6 +26,10 @@ export const Header = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
+    @media ${device.mobileS} {
+        position: absolute;
+        right: 0;
+    }
 `
 
 export const IconBtn = styled.button`
@@ -41,14 +45,30 @@ export const IconBtn = styled.button`
 export const Content = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media ${device.mobileS} {
+        display: unset;
+        justify-content: unset;
+    }
 `
 
 export const LeftPart = styled.div`
     margin-right: 14px;
     flex-grow: 2;
+
+    @media ${device.mobileS} {
+        flex-grow: unset;
+        margin-right: unset;
+    }
 `
 export const RightPart = styled.div`
     flex-grow: 1;
+
+    @media ${device.mobileS} {
+        flex-grow: unset;
+        margin-top: 25px;
+        padding: 0px 20px;
+    }
 `
 
 export const Block = styled.div<InnerWrapperProps>`
