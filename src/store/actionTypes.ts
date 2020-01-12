@@ -1,4 +1,3 @@
-//TODO: review 
 const actionTypes = {
     SET_PHOTOS: "SET_PHOTOS",
     PHOTOS_REQUEST: "PHOTOS_REQUEST",

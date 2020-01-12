@@ -94,7 +94,6 @@ const Item: React.FC<ItemProps> = ({ url, id, setModalPhotoAction, comments, pho
 };
 
 const mapStateToProps = ({ item }) => ({
-    //TODO
     photo: item.photo,
     comments: item.comments,
     isReady: item.isReady

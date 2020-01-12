@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-//TODO: alias store
 import { setPhotos } from '@store/actions/photos';
 import { Loader } from '@molecules/Loader';
 import { Wrapper, LoaderWrapper, InnerWrap } from './style';
@@ -15,7 +14,6 @@ interface GalleryProps {
 }
 
 const Gallery: React.FC<GalleryProps> = ({ photos, setPhotosAction, isReady }) => {
-    //TODO
     useEffect(() => {
         setPhotosAction();
     }, []);
@@ -35,7 +33,6 @@ const Gallery: React.FC<GalleryProps> = ({ photos, setPhotosAction, isReady }) =
 };
 
 const mapStateToProps = ({ photos }) => ({
-    //TODO
     photos: photos.photos,
     isReady: photos.isReady
 });
