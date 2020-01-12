@@ -24,7 +24,8 @@
       "@templates/*": ["src/components/templates/*"],
       "@pages/*": ["src/components/pages/*"],
       "@store/*": ["src/store/*"],
-      "@common/*": ["src/common/*"]
+      "@common/*": ["src/common/*"],
+      "@device/*": ["src/device/*"],
     }
   },
   "include": [
