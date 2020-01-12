@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+//TODO: alias store
 import { setPhotos } from '@store/actions/photos';
 import { Loader } from '@molecules/Loader';
 import { Wrapper, LoaderWrapper } from './style';
