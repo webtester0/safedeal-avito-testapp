@@ -12,11 +12,3 @@ export const setModalPhoto = id => dispatch => {
         })
         .catch(error => console.log(error))
 }
-//TODO: можно и без action на submit
-export const submitCommit = ({id, name, text}) => dispatch => {
-    axios
-        .post(`https://boiling-refuge-66454.herokuapp.com/images/${id}/comments`, {
-            name: `${name}`,
-            comment: `${text}`
-        })
-}

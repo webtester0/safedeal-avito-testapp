@@ -3,6 +3,7 @@ import actionTypes from '../actionTypes'
 const initialState = {
     photo: '',
     comments: null,
+    isReady: false,
 };
 
 export default (state = initialState, action) => {
@@ -12,6 +13,7 @@ export default (state = initialState, action) => {
                 ...state,
                 photo: action.payload.url,
                 comments: action.payload.comments,
+                isReady: true
             }
         default:
             return state;

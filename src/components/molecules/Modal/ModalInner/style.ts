@@ -22,7 +22,6 @@ export const ModalOverlay = styled.div`
   bottom: 0;
 `;
 
-//TODO 
 export const ModalWindow = styled.div`
   background-color: #ffffff;
   box-shadow: 0px 0px 24px rgba(45, 47, 51, 0.25);
@@ -31,13 +30,6 @@ export const ModalWindow = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  /* overflow: hidden;
-  -ms-overflow-y: visible;
-  max-height: calc(100vh - 40px); */
-
-  /* TODO: пока мешает  */
-  /* max-width: 620px; */
-
   transform: translate(0, -10%);
   width: 620px;
 `;

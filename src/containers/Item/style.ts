@@ -58,3 +58,9 @@ export const ButtonContent = styled.div`
     justify-content: center;
     align-items: center
 `
+
+export const LoaderWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

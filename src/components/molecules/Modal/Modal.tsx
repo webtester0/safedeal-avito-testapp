@@ -6,7 +6,6 @@ import { MergeNativeProps } from '@common/interface';
 interface ModalOwnProps {
     isOpen: boolean;
 
-    //TODO: all Function change to arrow!!!
     onEscape?: () => void;
 
     onClickAway?: (event: React.MouseEvent) => void;

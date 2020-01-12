@@ -31,7 +31,9 @@ module.exports = {
         alias: {
             'typescript-ioc': 'typescript-ioc/es5.js',
             'react-dom': '@hot-loader/react-dom',
-            '@components': path.resolve(__dirname, '../src', 'components'),
+            '@pages': path.resolve(__dirname, '../src/components', 'pages'),
+            '@molecules': path.resolve(__dirname, '../src/components', 'molecules'),
+            '@organisms': path.resolve(__dirname, '../src/components', 'organisms'),
             '@containers': path.resolve(__dirname, '../src', 'containers'),
             '@store': path.resolve(__dirname, '../src', 'store'),
             '@assets': path.resolve(__dirname, '../src', 'assets'),
