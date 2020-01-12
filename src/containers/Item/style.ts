@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
+import { device } from '@device'
+
 
 interface InnerWrapperProps {
     url?: string;
@@ -11,6 +13,13 @@ export const InnerWrapper = styled.div<InnerWrapperProps>`
     margin-bottom: 2%;
     ${props => props.url && css`background-image: url(${props.url})`};
     background-size: cover;
+
+    @media ${device.mobileS} {
+        width: 100%;
+        min-height: 180px;
+        margin-bottom: 5%;
+        padding: 0;
+    }
 `
 
 export const Header = styled.div`

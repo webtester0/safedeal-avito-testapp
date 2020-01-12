@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 //TODO: alias store
 import { setPhotos } from '@store/actions/photos';
 import { Loader } from '@molecules/Loader';
-import { Wrapper, LoaderWrapper } from './style';
+import { Wrapper, LoaderWrapper, InnerWrap } from './style';
 import { Item } from '@containers/Item';
 
 interface GalleryProps {
     photos?: { id: number; url: string }[];
 
     isReady?: boolean;
-    
+
     setPhotosAction?: () => void;
 }
 
@@ -21,9 +21,11 @@ const Gallery: React.FC<GalleryProps> = ({ photos, setPhotosAction, isReady }) =
     }, []);
     return isReady ? (
         <Wrapper>
-            {photos.map(item => (
-                <Item key={item.id} url={item.url} id={item.id}></Item>
-            ))}
+            <InnerWrap>
+                {photos.map(item => (
+                    <Item key={item.id} url={item.url} id={item.id}></Item>
+                ))}
+            </InnerWrap>
         </Wrapper>
     ) : (
         <LoaderWrapper>
@@ -36,7 +38,7 @@ const mapStateToProps = ({ photos }) => ({
     //TODO
     photos: photos.photos,
     isReady: photos.isReady
- });
+});
 const mapDispathcToProps = dispatch => ({
     setPhotosAction: () => dispatch(setPhotos())
 });
